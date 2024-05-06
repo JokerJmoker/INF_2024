@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb://mongodb_container:27017/')
+client = MongoClient('mongodb://mongo_container:27017/')
 db = client['testdb']
 collection = db['collection']
 

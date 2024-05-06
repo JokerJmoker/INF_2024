@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://mongodb_container:27017/')
+client = MongoClient('mongodb://mongodb_container:27017/') # НА ЭТОЙ СТРОЧКЕ ОШИБКА ПРИ ЗАПУСКЕ КОНТЕЙНЕРА 
 db = client['testdb']
 collection = db['collection']
 

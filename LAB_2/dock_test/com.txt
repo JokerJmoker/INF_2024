@@ -1,0 +1,4 @@
+1 docker network create mynetwork общая сеть
+2 docker build -t flask_app . создаем образ 
+3 docker run -d --name mongodb_container --network mynetwork mongo:latest запускаем контейнер монго
+4 docker run -d --name flask_app_container -p 5000:5000 --network mynetwork flask_app запускаем контейенра приложения

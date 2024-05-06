@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    build: . # сборка докерфайла из этого же каталога, что и compose 
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo 
+    networks:
+      - lab_network 
+  mongo:
+    image: mongo 
+    container_name: mongodb_container
+    networks:
+      - lab_network 
+
+networks:
+  lab_network:
+    driver: bridge 
+

@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient('mongodb_container', 27017)
+client = MongoClient('mongo', 27017)
 db = client['testdb']
 collection = db['collection']
 

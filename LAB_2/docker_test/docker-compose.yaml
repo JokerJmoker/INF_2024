@@ -10,7 +10,6 @@ services:
       - lab_network 
   mongo:
     image: mongo 
-    container_name: mongodb_container
     networks:
       - lab_network 
 

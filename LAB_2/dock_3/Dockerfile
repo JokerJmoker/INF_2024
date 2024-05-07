@@ -1,17 +1,14 @@
 FROM python:3.8
 
-WORKDIR /app 
+WORKDIR /app
 
+COPY app.py .
 RUN echo "\
 flask\n\
 pymongo\n\
 " > req.txt
-
 RUN pip install -r req.txt
 
-COPY app_test.py .
+COPY ./templates/index.html ./templates/
 
-CMD ["python", "create_db.py"]
-
-CMD ["python", "app_test.py"]
-
+CMD ["python", "app.py"]

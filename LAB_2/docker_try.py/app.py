@@ -4,10 +4,12 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-mongo_host = os.getenv('MONGO_DB_ADDR', 'localhost')
+# Используем переменные окружения для конфигурации подключения к MongoDB
+mongo_host = os.getenv('MONGO_DB_ADDR', 'mongo')
 mongo_port = int(os.getenv('MONGO_DB_PORT', 27017))
 db_name = os.getenv('DB', 'testdb')
 
+# Создаем клиент для подключения к MongoDB
 client = MongoClient(mongo_host, mongo_port)
 db = client[db_name]
 collection = db['collection']

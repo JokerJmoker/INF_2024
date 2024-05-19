@@ -6,8 +6,7 @@ COPY . /app
 RUN echo "\
 flask\n\
 pymongo\n\
-" > req.txt
-RUN pip install -r req.txt
+" > requirements.txt
+RUN pip install -r requirements.txt
 
 COPY ./templates/index.html ./templates/
-

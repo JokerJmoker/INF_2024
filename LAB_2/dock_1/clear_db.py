@@ -1,4 +1,4 @@
-from pymongo import MongoClient
+from pymongo import MongoClient # очищаем бд при помощи изветсных методов
 
 client = MongoClient('mongodb://localhost:27017/')
 

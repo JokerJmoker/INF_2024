@@ -20,5 +20,7 @@ def index():
     texts = [doc['tags'] for doc in documents]
     return render_template('index.html', data=texts)
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+
+# здесь мы убрали строку на проверку того, запущен ли этот скрипт напрямую, а не импортируется в виде модлуя ( составляющей ) другими скриптами.С точки зрения рефакторинга ее следует сотавить, однако для нашей задачи можно и опустить  
+
+app.run(debug=True, host='0.0.0.0')
